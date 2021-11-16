@@ -1,31 +1,35 @@
 import React from 'react';
 import './header.scss';
 
-import logo from '../../assets/icons/logo.svg'
+import logoIcon from '../../assets/icons/logo.svg'
+import signInIcon from '../../assets/icons/sign-in.svg'
+import cartIcon from '../../assets/icons/cart.svg'
+import arrowIcon from '../../assets/icons/arrow.svg'
 
 function Header () {
   return (
     <header className="header">
-    <div className="logo-and-contact-button-wrapper">
-      <a className="site-logo">
-        <img src={ logo } className="site-navigation-icon" alt=""/>
+      <a className="logo-link">
+        <img src={ logoIcon } className="logo-icon" alt=""/>
       </a>
-      <a className="site-logo">contact with us</a>
-    </div>
-    <ul className="site-navigation">
-      <li>
-        <a className="site-navigation-link">
-          Sign in
-          <img src='' className="site-navigation-icon" alt=""></img>
-        </a>
-      </li>
-      <li>
-        <button className="site-navigation-link">
-          <img src='' className="site-navigation-icon" alt=""></img>
-        </button>
-      </li>
-    </ul> 
-  </header>
+      <a className="contact-button">contact with us
+        <img src={ arrowIcon } className="arrow-icon" alt=""></img>
+      </a>
+      <ul className="site-navigation">
+        <li>
+          <a className="sign-in-link">
+            sign in
+            <img src={ signInIcon } className="sign-in-icon" alt=""></img>
+          </a>
+        </li>
+        <li>
+          <button className="cart-icon-button">
+            <img src={ cartIcon } className="cart-icon" alt=""></img>
+            <span className="cart-item-counter">26</span>
+          </button>
+        </li>
+      </ul> 
+    </header>
   )
 }
 
